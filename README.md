@@ -23,4 +23,10 @@ will return:
     </div>
 </div>
 ```
+Usage
+```js
+.add(htmlTag, objectOfAttribute);      //add new html element
+.contains(htmlTag, objectOfAttribute); //add child html element
+.end()                                 //back to parent node
+```
 
