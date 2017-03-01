@@ -2,7 +2,7 @@
 This is a tool that can make html element by using javascript chain method
 
 ###Example
-```
+```js
 var test = html()
     .add('div', {className: 'container', data: { info: 'extraInformation' }})
         .contains('div', {className: 'header'})
@@ -13,7 +13,7 @@ var test = html()
     .build();
 ```
 will return:
-```
+```html
 <div class="container" data-info="extraInformation">
     <div class="header">
         <h5 class="headerTitle">This is a header</h5>
