@@ -25,8 +25,9 @@ will return:
 ```
 ###Usage
 ```js
-.add(htmlTag, objectOfAttribute);      //add new html element
-.contains(htmlTag, objectOfAttribute); //add child html element
-.end()                                 //back to parent node
+.add(htmlTag, objectOfAttribute);      //add a new html element
+.contains(htmlTag, objectOfAttribute); //add a first-child html element
+.end()                                 //back to parent node from current node
+.build()                               //return outerHTML
 ```
 
