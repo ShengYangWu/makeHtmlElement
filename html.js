@@ -65,18 +65,20 @@ var html = (function(documentToBind) {
     };
     function appendToLastAtLevel(chunk, level, element) {
         var selectorString = "*";
-        for(var i = 0; i <= level; i++) {selectorString += ">*";}
+        for(var i = 0; i <= level; i++) {selectorString += ">*";};
         var possLvls = chunk.querySelectorAll(selectorString);
-        possLvls[possLvls.length - 1].parentNode.parentNode.appendChild(element);
+        possLvls[0].parentNode.appendChild(element);
         return chunk;
     };
     function buildDOM() {
         var level = 0, chunk, element, tempLv;     
-        chunk = makeEle(template[0]);        
+        chunk = makeEle(template[0]);
+        console.log(chunk);
         for(var i = 1; i < template.length; i++) {
             element = makeEle(template[i]);
             tempLv = template[i].level;
             if((tempLv - 1) === level) {
+                (tempLv - 1) === level
                 chunk.appendChild(element);
             } else if(level < tempLv) {
                 level = tempLv - 1;
