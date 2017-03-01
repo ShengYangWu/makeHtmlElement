@@ -23,7 +23,7 @@ will return:
     </div>
 </div>
 ```
-Usage
+###Usage
 ```js
 .add(htmlTag, objectOfAttribute);      //add new html element
 .contains(htmlTag, objectOfAttribute); //add child html element
